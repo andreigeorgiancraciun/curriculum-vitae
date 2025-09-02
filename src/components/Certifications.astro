@@ -1,0 +1,65 @@
+---
+import Section from "./Section.astro";
+import type { CertificationProps } from "@types";
+
+interface Props { certifications: CertificationProps[] }
+const { certifications } = Astro.props;
+---
+
+<Section text="Certifications" href="certifications">
+  <ul
+    class="grid auto-rows-fr gap-6 sm:grid-cols-2 lg:grid-cols-3"
+    aria-label="Certification cards"
+  >
+    {
+      certifications.map(({ name, earnedOn, linkPreview, image }) => (
+        <li
+          class="group h-full overflow-hidden rounded-2xl border border-neutral/20 bg-black/90 shadow-[0_0_0_1px_rgb(255_255_255/0.02)_inset] transition hover:shadow-[0_0_0_1px_rgb(255_255_255/0.08)_inset] flex flex-col"
+        >
+          {/* Image */}
+          <div class="relative">
+            <div class="aspect-[16/9] w-full overflow-hidden rounded-t-2xl bg-[#121212]">
+              <img
+                src={image}
+                alt={`${name} certificate badge`}
+                class="h-full w-full object-contain p-6 transition group-hover:scale-[1.02]"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+
+          {/* Body */}
+          <div class="flex grow flex-col gap-3 p-5">
+            <h3 class="font-serif text-xl font-medium text-primary leading-tight line-clamp-3 min-h-[5.25rem]">{name}</h3>
+
+            <div class="text-sm text-neutral">
+              <time datetime={earnedOn}>
+                Earned on: {earnedOn}
+              </time>
+            </div>
+
+            {linkPreview && (
+              <a
+                href={linkPreview}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-auto inline-flex w-fit items-center gap-2 rounded-xl border border-neutral/30 px-3 py-2 text-sm font-medium text-white transition hover:border-neutral hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+                aria-label={`Verify ${name} on issuer site`}
+              >
+                Verify
+                <span aria-hidden="true" class="relative top-[1px] inline-block">
+                  <svg width="14" height="14" viewBox="0 0 24 24">
+                    <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" />
+                    <path d="M21 3 10 14" stroke="currentColor" stroke-width="2" />
+                    <path d="M21 13v7H3V3h7" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </span>
+              </a>
+            )}
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</Section>
