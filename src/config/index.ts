@@ -28,7 +28,7 @@ export const SITE_CONTENT: SiteContent = {
     specialty: "Java Backend Developer",
     summary:
       "Developer based in Bucharest, ROMANIA. I specialize in building scalable backend systems, designing REST and gRPC APIs, and maintaining microservices using Java and Spring Boot.",
-    email: "andrei.craciun@voya.ai",
+    email: "andreigeorgiancraciun@yahoo.com"
   },
   experience: [
     {
