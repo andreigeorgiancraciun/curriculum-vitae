@@ -15,7 +15,10 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "About", href: "#about" },
   ],
   socialLinks: [
-    { text: "LinkedIn", href: "https://www.linkedin.com/in/andrei-georgian-craciun" },
+    {
+      text: "LinkedIn",
+      href: "https://www.linkedin.com/in/andrei-georgian-craciun",
+    },
     { text: "Github", href: "https://github.com/andreigeorgiancraciun" },
   ],
   socialImage: "/zen-og.png",
@@ -28,7 +31,7 @@ export const SITE_CONTENT: SiteContent = {
     specialty: "Java Backend Developer",
     summary:
       "Developer based in Bucharest, ROMANIA. I specialize in building scalable backend systems, designing REST and gRPC APIs, and maintaining microservices using Java and Spring Boot.",
-    email: "andreigeorgiancraciun@yahoo.com"
+    email: "andreigeorgiancraciun@yahoo.com",
   },
   experience: [
     {
@@ -50,7 +53,7 @@ export const SITE_CONTENT: SiteContent = {
       summary: [
         "As a Java Backend Developer at Société Générale Corporate & Investment Banking, I worked on two critical applications: a legacy 30+ year-old monolith and a new platform built on Spring Boot microservices.",
         "My responsibilities included developing new features, maintaining existing functionality, and providing support for numerous internal clients who relied on our services for financial workflows.",
-        "I actively contributed to the gradual refactoring and replacement of the monolith, integrating RabbitMQ to enable reliable asynchronous communication between services. In addition, I participated in on-call rotations (two weeks at a time) to ensure stability, uptime, and responsiveness for production systems."
+        "I actively contributed to the gradual refactoring and replacement of the monolith, integrating RabbitMQ to enable reliable asynchronous communication between services. In addition, I participated in on-call rotations (two weeks at a time) to ensure stability, uptime, and responsiveness for production systems.",
       ],
     },
     {
@@ -62,7 +65,7 @@ export const SITE_CONTENT: SiteContent = {
         "As a Java Developer for the Access UK Immigration Application Service, I am responsible for the development and maintenance of the UK's online immigration application system.",
         "With a focus on code quality, continuous improvement, and utilizing modern technologies, I work on multiple Java Spring Boot applications within a microservices architecture.",
         "By leveraging Docker containers, CI/CD pipelines, Kubernetes, and AWS as a cloud provider, I ensure the efficient and reliable operation of the system. Additionally, I review pull requests, contribute impact assessments for new functionalities, and drive enhancements to deliver an exceptional user experience.",
-      ]
+      ],
     },
     {
       company: "Insurance Business Applications",
@@ -72,8 +75,8 @@ export const SITE_CONTENT: SiteContent = {
       summary: [
         "I am a Software Engineer with solid experience in the Insurance industry, developing and deploying Java Spring Boot applications using a microservices architecture on AWS cloud.",
         "My core skills include Java (8-17), Spring Framework, Spring Boot, Hibernate, and Data Persistence with JPA. I have a hands-on approach to unit testing with JUnit and Mockito and experience managing data streams with Apache Kafka.",
-        "I'm proficient in database management using JDBC, enhancing the interaction between Java and various databases. In the DevOps realm, I use Docker and Kubernetes for deployment and scaling, Git for version control, Maven for build automation, and Jenkins for continuous integration/delivery."
-      ]
+        "I'm proficient in database management using JDBC, enhancing the interaction between Java and various databases. In the DevOps realm, I use Docker and Kubernetes for deployment and scaling, Git for version control, Maven for build automation, and Jenkins for continuous integration/delivery.",
+      ],
     },
     {
       company: "Connections Consult",
@@ -86,8 +89,8 @@ export const SITE_CONTENT: SiteContent = {
         "I have experience in managing databases using PostgreSQL.",
         "On the frontend, my expertise lies in using Angular, TypeScript, and Material to build intuitive and responsive interfaces.",
         "My DevOps skills include containerization using Docker and managing codebases with Git. I am also proficient in Maven for project management and build automation.",
-      ]
-    }
+      ],
+    },
   ],
   education: [
     {
@@ -100,59 +103,75 @@ export const SITE_CONTENT: SiteContent = {
     {
       institution: "Universitatea POLITEHNICA din București",
       degree: "Bachelor's degree",
-      fieldOfStudy: "Electronics, Telecommunications and Information Technology",
+      fieldOfStudy:
+        "Electronics, Telecommunications and Information Technology",
       startDate: "2014",
       endDate: "2018",
-    }
+    },
   ],
   projects: [
     {
       name: "Travel Planner App",
-      summary: "A travel planner platform integrated with ChatGPT API, it provides real-time information about destinations — including weather, currency, attractions, restaurants, traditional food, transport, hotels, and local events.",
+      summary:
+        "A travel planner platform integrated with ChatGPT API, it provides real-time information about destinations — including weather, currency, attractions, restaurants, traditional food, transport, hotels, and local events.",
       linkPreview: "https://youtu.be/bouCwoRb89U",
       linkSource: "https://github.com/andreigeorgiancraciun/journey-genius",
       image: "/travel-planner.png",
     },
     {
       name: "Library Platform",
-      summary: "A full-stack system built with a React frontend and a Spring Boot microservices backend, orchestrated via Docker, Eureka, Config Server, and Gateway.",
+      summary:
+        "A full-stack system built with a React frontend and a Spring Boot microservices backend, orchestrated via Docker, Eureka, Config Server, and Gateway.",
       linkPreview: "https://youtu.be/qL4-T1AuakA",
-      linkSource: "https://github.com/CodeDeiOrg/Spring-Microservices-Backend-Docker",
+      linkSource:
+        "https://github.com/CodeDeiOrg/Spring-Microservices-Backend-Docker",
       image: "/library.png",
     },
     {
       name: "OLX Auto-Poster Backend App",
-      summary: "Spring Boot service that integrates with the OLX Europe Partner API to automatically post and manage adverts, sync statuses, and handle messaging with OLX users.",
+      summary:
+        "Spring Boot service that integrates with the OLX Europe Partner API to automatically post and manage adverts, sync statuses, and handle messaging with OLX users.",
       linkPreview: "https://developer.olx.ro/api/doc#section/Authentication",
       linkSource: "https://github.com/andreigeorgiancraciun/olx-back-end",
       image: "/olx.png",
-    }
+    },
   ],
   certifications: [
     {
+      name: "MongoDB Associate Developer",
+      earnedOn: "December 2025",
+      linkPreview:
+        "https://www.credly.com/badges/1ce70b81-8ed8-401f-9f93-b7065bef0f37/linked_in_profile",
+      image: "/mongodb.png",
+    },
+    {
       name: "Oracle Certified Associate, Java SE 8 Programmer",
       earnedOn: "April 2023",
-      linkPreview: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=A5CA735A32C3A42F146300164DCF8EE06EAD3B382EB6197D18B10CA6802E4028",
-      image: "/oracle.png"
+      linkPreview:
+        "https://catalog-education.oracle.com/ords/certview/sharebadge?id=A5CA735A32C3A42F146300164DCF8EE06EAD3B382EB6197D18B10CA6802E4028",
+      image: "/oracle.png",
     },
     {
       name: "Microsoft Certified: Azure Fundamentals",
       earnedOn: "June 2025",
-      linkPreview: "https://learn.microsoft.com/api/credentials/share/en-us/AndreiGeorgianCraciun/96817C68C1DE47E9?sharingId",
-      image: "/microsoft.png"
+      linkPreview:
+        "https://learn.microsoft.com/api/credentials/share/en-us/AndreiGeorgianCraciun/96817C68C1DE47E9?sharingId",
+      image: "/microsoft.png",
     },
     {
       name: "Amazon Web Services (AWS)",
       earnedOn: "November 2022",
-      linkPreview: "https://www.credly.com/badges/7589355b-9a8b-4391-9d4b-1cdf2e8c0a12/linked_in_profile",
-      image: "/aws.png"
+      linkPreview:
+        "https://www.credly.com/badges/7589355b-9a8b-4391-9d4b-1cdf2e8c0a12/linked_in_profile",
+      image: "/aws.png",
     },
     {
       name: "AgilePM® Foundation",
       earnedOn: "November 2018",
-      linkPreview: "https://www.youracclaim.com/badges/6729ea09-7ac4-48ac-89d5-b85712aa875e",
-      image: "/agile.png"
-    }
+      linkPreview:
+        "https://www.youracclaim.com/badges/6729ea09-7ac4-48ac-89d5-b85712aa875e",
+      image: "/agile.png",
+    },
   ],
   about: {
     description: `
